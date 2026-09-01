@@ -30,7 +30,7 @@
     <section id="story" class="section container intro">
       <p class="eyebrow">Two hearts, one adventure</p>
       <h2>Our Story</h2>
-      <p>From a chance meeting to a lifetime of memories, we're so excited to celebrate the next chapter with the people we love most.</p>
+      <p>We're so excited to celebrate the next chapter with the people we love most.</p>
   
       <h2>Countdown
       <div id="date">
@@ -54,13 +54,13 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result
-        document.getElementById("demo").innerHTML =
+        document.getElementById("date").innerHTML =
           days + "d " + hours + "h " + minutes + "m " + seconds + "s";
 
         // If the countdown is over
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("demo").innerHTML = "EXPIRED";
+          document.getElementById("date").innerHTML = "EXPIRED";
         }
 
       }, 1000);
