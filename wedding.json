@@ -32,6 +32,6 @@
   "rsvp": {
     "enabled": true,
     "formAction": "https://formsubmit.co/jenandchristy1812@gmail.com",
-    "fields": [ "Guest1", "Guest2", "email", "attendance", "dietary", "message" ]
+    "fields": [ "Guest1", "Guest2", "email", "phone", "code", "attendance", "dietary", "message" ]
   }
 }
