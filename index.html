@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jenni & Christy — Our Wedding</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <a class="brand" href="#">J & C</a>
+      <div class="nav-links">
+        <a href="#story">Our Story</a>
+        <a href="#details">Details</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#rsvp">RSVP</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <p class="eyebrow">We're getting married</p>
+      <h1>Jenni <span>&amp;</span> Christy</h1>
+      <p class="date">Saturday, 18th December 2027 · Greenmeadow Golf Club, Cwmbran, Wales</p>
+      <a class="button" href="#rsvp">RSVP</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="story" class="section container intro">
+      <p class="eyebrow">Two hearts, one adventure</p>
+      <h2>Our Story</h2>
+      <p>From a chance meeting to a lifetime of memories, we're so excited to celebrate the next chapter with the people we love most.</p>
+  
+      <h2>Countdown
+      <div id="date">
+      <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Dec 18, 2027 12:30:00").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the countdown date
+        var distance = countDownDate - now;
+
+        // Time calculations
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result
+        document.getElementById("demo").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+        // If the countdown is over
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+
+      }, 1000);
+      </script>
+      </h2>
+      </div>
+    </section>
+
+    <section id="details" class="section section-soft">
+      <div class="container">
+        <p class="eyebrow">The important bits</p>
+        <h2>Wedding Details</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="icon">♡</span>
+            <h3>Ceremony</h3>
+            <p>1:00 PM</p>
+            <p>St Gabriels Church<br>Cwmbran, Wales</p>
+          </article>
+          <article class="card">
+            <span class="icon">✦</span>
+            <h3>Reception</h3>
+            <p>3:00 PM onwards</p>
+            <p>Greenmeadow Golf Club<br>Cwmbran, Wales</p>
+          </article>
+          <article class="card">
+            <span class="icon">⌂</span>
+            <h3>Dress Code</h3>
+            <p>Christmas Themed -</p>
+            <p>Wear something you feel wonderful in.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section container">
+      <p class="eyebrow">Join us for the day</p>
+      <h2>Schedule</h2>
+      <div class="timeline">
+        <div><time>12:30 PM</time><p>Guest arrival</p></div>
+        <div><time>1:00 PM</time><p>Ceremony</p></div>
+        <div><time>2:30 PM</time><p>Drinks & photographs</p></div>
+        <div><time>3:30 PM</time><p>Wedding breakfast</p></div>
+        <div><time>7:00 PM</time><p>First dance & party</p></div>
+        <div><time>11:00 PM</time><p>Last dance</p></div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section rsvp"> 
+      <div class="container rsvp-box"> 
+        <div id="rsvp-form-wrapper"> 
+          <p class="eyebrow">We hope you can join us</p> 
+          <h2>RSVP</h2> 
+          <p>Please reply by 1 October 2027.</p> 
+          <form id="rsvp-form" action="https://formsubmit.co/jenandchristy1812@gmail.com" method="POST" > 
+            <label> Guest 1 <input type="text" name="Guest1" autocomplete="name" required> </label> 
+            <label> Guest 2 <input type="text" name="Guest2"> </label> 
+            <label> Email <input type="email" name="email" autocomplete="email" required> </label> 
+            <label> Will you attend? 
+              <select name="attendance" required> 
+                <option value="yes">Joyfully accepts</option> 
+                <option value="no">Sadly declines</option> </select> 
+              </label> 
+              <label> Dietary Requirements <input type="text" name="dietary" placeholder="Please specify" > </label> 
+              <label> Message <textarea name="message" rows="4" placeholder="Additional Information" ></textarea> </label> 
+              <!-- FormSubmit settings --> 
+               <input type="hidden" name="_subject" value="New Wedding RSVP" > 
+               <input type="hidden" name="_template" value="table" > 
+               <!-- Prevent FormSubmit from redirecting --> 
+                <input type="hidden" name="_captcha" value="false" > 
+                <button class="button" type="submit" id="rsvp-submit" > Send RSVP </button> 
+          </form> </div> <!-- Success message --> 
+          <div id="rsvp-success" class="rsvp-success" hidden aria-live="polite" > 
+            <p class="eyebrow">Thank you</p> 
+            <h2>RSVP received!</h2> 
+            <p> We're so happy to hear from you. Your RSVP has been sent successfully. </p> 
+            <p> We can't wait to celebrate with you! ❤️ </p>
+          </div> <!-- Error message --> 
+          <div id="rsvp-error" class="rsvp-error" hidden aria-live="assertive" > 
+            <p> Something went wrong while sending your RSVP. Please try again. </p> 
+          </div> 
+        </div> 
+      </section>
+  </main>
+
+  <footer>
+    <p>Jenni &amp; Christy · 18 December 2027</p>
+  </footer>
+</body>
+</html>

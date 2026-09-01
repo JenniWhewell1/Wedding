@@ -1,0 +1,37 @@
+{
+  "couple": {
+    "partner1": "Jenni",
+    "partner2": "Christy"
+  },
+  "wedding": {
+    "date": "2027-12-18",
+    "displayDate": "Saturday, 18 December 2027",
+    "city": "Cwmbran",
+    "country": "Wales",
+    "rsvpDeadline": "2027-10-01"
+  },
+  "venues": {
+    "ceremony": {
+      "name": "St Gabriels Church",
+      "time": "13:00"
+    },
+    "reception": {
+      "name": "Greenmeadow Golf Clubl",
+      "time": "14:30"
+    }
+  },
+  "dressCode": "Christmas",
+  "schedule": [
+    {"time": "13:30", "title": "Guest arrival"},
+    {"time": "14:00", "title": "Ceremony"},
+    {"time": "15:00", "title": "Drinks & photographs"},
+    {"time": "16:00", "title": "Wedding breakfast"},
+    {"time": "19:00", "title": "First dance & party"},
+    {"time": "23:30", "title": "Last dance"}
+  ],
+  "rsvp": {
+    "enabled": true,
+    "formAction": "https://formsubmit.co/jenandchristy1812@gmail.com",
+    "fields": [ "Guest1", "Guest2", "email", "attendance", "dietary", "message" ]
+  }
+}
